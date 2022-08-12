@@ -3,9 +3,15 @@ import { Router } from 'express'
 
 const router = Router()
 
-import { getUsersData, register, login } from '../controllers/user.controller'
+import { getUsersData, isLogged, closeSession, getCurrentId, register, login } from '../controllers/user.controller'
 
-router.get('/getUsersData', getUsersData)
+router.get('/getUsersData/:id', getUsersData)
+
+router.get('/isLogged/:id', isLogged)
+
+router.get('/closeSession/:id', closeSession)
+
+router.get('/getCurrentId', getCurrentId)
 
 router.post('/register', register)
 

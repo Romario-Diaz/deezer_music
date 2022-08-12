@@ -1,11 +1,12 @@
 
 import sql from "mssql"
+import config_env from "../config/config_env"
 
 const dbCredentials = {
-    user: "sa", 
-    password: "@Latinvest20",
-    server: "DESKTOP-N41Q741", 
-    database: "foxbel_music",
+    user: config_env.USER, 
+    password: config_env.PASSWORD,
+    server: config_env.SERVER, 
+    database: config_env.DATABASE,
     options: {
         encrypt: true,
         trustServerCertificate: true,
